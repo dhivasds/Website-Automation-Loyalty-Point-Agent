@@ -14,6 +14,8 @@ public class CashoutPage extends PageObject {
     private By fieldBalanceAmount(){ return By.xpath("//input[@placeholder='Balance Amount']");}
     private By cashout1000(){ return By.xpath("(//td[normalize-space()='Cashout 1000'])[1]");}
     private By fieldSearch(){ return By.xpath("//input[@placeholder='Search . . .']");}
+    private By buttonDelete(){ return By.xpath("//tbody/tr[3]/td[5]/button[1]");}
+    private By buttonEdit(){ return By.xpath("//tbody/tr[3]/td[5]/a[1]/button[1]");}
 
 //    *Validation
     private By successAddData(){ return By.xpath("//h2[normalize-space()='Cashout Product']");}
@@ -30,6 +32,10 @@ public class CashoutPage extends PageObject {
     public void inputFieldBalanceAmount(String balanceAmount){ $(fieldBalanceAmount()).sendKeys(balanceAmount);}
     @Step
     public void inputFieldSearch(){ $(fieldSearch()).sendKeys("Cashout 1000");}
+    @Step
+    public void clickButtonDelete(){ $(buttonDelete()).click();}
+    @Step
+    public void clickButtonEdit(){ $(buttonEdit()).click();}
 
 
     //    *Equals

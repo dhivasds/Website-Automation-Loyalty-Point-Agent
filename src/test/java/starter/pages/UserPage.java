@@ -13,6 +13,7 @@ public class UserPage extends PageObject {
     private By fieldCoin(){ return By.xpath("//input[@placeholder='Coin']");}
     private By sidebarUser(){ return By.xpath("//span[normalize-space()='User']");}
     private By fieldSearch(){ return By.xpath("//input[@placeholder='Search . . .']");}
+    private By buttonEdit(){ return By.xpath("//tbody/tr[1]/td[7]/a[1]/button[1]");}
 
 
 //    *Validation
@@ -32,6 +33,8 @@ public class UserPage extends PageObject {
     public void clickSidebarUser(){$(sidebarUser()).click();}
     @Step
     public void inputFieldSearch(){ $(fieldSearch()).sendKeys("dhivasds@gmail.com");}
+    @Step
+    public void clickButtonEdit(){ $(buttonEdit()).click();}
 
 //    *Equals
     @Step

@@ -14,6 +14,9 @@ public class UserSteps {
     @When("I click sidebar User")
     public void iClickSidebarUser() { userPage.clickSidebarUser();}
 
+    @And("I click button edit user")
+    public void iClickButtonEditUser() { userPage.clickButtonEdit();}
+
     @And("I input field {string} name in pulsa")
     public void iInputFieldNameInPulsa(String name) { userPage.inputFieldName(name);}
 
@@ -46,4 +49,5 @@ public class UserSteps {
         userPage.verifyUser();
         userPage.verifyUserEquals();
     }
+
 }

@@ -14,7 +14,7 @@ public class TopupProductPage extends PageObject {
     private By fieldAmount(){ return By.xpath("//input[@placeholder='Amount']");}
     private By fieldGrossAmount(){ return By.xpath("//input[@placeholder='Gross Amount']");}
     private By buttonSubmit(){ return By.cssSelector("button[type='submit']");}
-    private By buttonEdit(){ return By.xpath("(//button[@type='button'])");}
+    private By buttonEdit(){ return By.xpath("//tbody/tr[1]/td[8]/a[1]/button[1]");}
     private By buttonDelete(){ return By.xpath("//tbody/tr[2]/td[5]/button[1]");}
     private By buttonSearch(){ return By.xpath("//input[@placeholder='Search . . .']");}
     private By productTopup50K(){ return By.xpath("//td[normalize-space()='TOPUP 50K']");}
@@ -35,11 +35,20 @@ public class TopupProductPage extends PageObject {
     @Step
     public void clickAddNew(){$(buttonAddNew()).click();}
     @Step
-    public void inputFieldName(String name){$(fieldName()).type(name);}
+    public void inputFieldName(String name){
+        $(fieldName()).clear();
+        $(fieldName()).type(name);
+    }
     @Step
-    public void inputFieldAmount(String amount){$(fieldAmount()).type(amount);}
+    public void inputFieldAmount(String amount){
+        $(fieldAmount()).clear();
+        $(fieldAmount()).type(amount);
+    }
     @Step
-    public void inputFieldGrossAmount(String grossAmount){$(fieldGrossAmount()).type(grossAmount);}
+    public void inputFieldGrossAmount(String grossAmount){
+        $(fieldGrossAmount()).clear();
+        $(fieldGrossAmount()).type(grossAmount);
+    }
     @Step
     public void clickButtonSubmit(){
         $(buttonSubmit()).click();

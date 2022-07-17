@@ -14,6 +14,9 @@ public class CashoutSteps {
     @When("I click sidebar Cashout Product")
     public void iClickSidebarCashoutProduct() { cashoutPage.clickSidebarCashoutProduct();}
 
+    @And("I click button edit cashout")
+    public void iClickButtonEditCashout() { cashoutPage.clickButtonEdit();}
+
     @And("I input field {string} name in cashout product")
     public void iInputFieldNameInCashoutProduct(String name) { cashoutPage.inputFieldName(name);}
 
@@ -36,6 +39,10 @@ public class CashoutSteps {
 
 
     //    ! TC Delete
+
+    @And("I click button delete cashout product")
+    public void iClickButtonDeleteCashoutProduct() { cashoutPage.clickButtonDelete();}
+
     @Then("I get the result cashout product")
     public void iGetTheResultCashoutProduct() {
         cashoutPage.verifyAddData();
@@ -52,4 +59,7 @@ public class CashoutSteps {
         cashoutPage.verifyCashout1000();
         cashoutPage.verifyCashout1000Equals();
     }
+
+
+
 }

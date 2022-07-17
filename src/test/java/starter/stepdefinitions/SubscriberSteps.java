@@ -24,9 +24,14 @@ public class SubscriberSteps {
     }
 
 //    ! TC Delete
+    @And("I click button delete subscriber")
+    public void iClickButtonDeleteSubscriber() { subscriberPage.clickButtonDelete();}
+
     @Then("I get the result subscriber")
     public void iGetTheResultSubscriber() {
         subscriberPage.verifyTeksSubs();
         subscriberPage.verifyTeksSubsEquals();
     }
+
+
 }

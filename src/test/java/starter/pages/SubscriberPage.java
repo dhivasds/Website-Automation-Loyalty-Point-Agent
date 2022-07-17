@@ -10,6 +10,7 @@ public class SubscriberPage extends PageObject {
     private By sidebarSubscriber(){ return By.xpath("//span[normalize-space()='Subscribe']");}
     private By fieldSearch(){ return By.xpath("//input[@placeholder='Search . . .']");}
     private By textSubs(){ return By.xpath("//h2[normalize-space()='Subscribe']");}
+    private By buttonDelete(){ return By.xpath("(//button[@type='button'])[1]");}
 
 //    *Validation
     private By successDeleteData(){ return By.xpath("//h2[normalize-space()='Subscribe']");}
@@ -20,6 +21,8 @@ public class SubscriberPage extends PageObject {
     public void clickSidebarSubscriber(){$(sidebarSubscriber()).click();}
     @Step
     public void inputFieldSearch(){ $(fieldSearch()).sendKeys("dhivasds@gmail.com");}
+    @Step
+    public void clickButtonDelete(){ $(buttonDelete()).click();}
 
 
 //    *Equals

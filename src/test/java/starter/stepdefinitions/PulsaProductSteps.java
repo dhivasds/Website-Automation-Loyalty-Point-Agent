@@ -48,6 +48,10 @@ public class PulsaProductSteps {
     public void iClickUpdate() { pulsaProductPage.clickButtonUpdate();}
 
     //  ! TC Delete
+
+    @And("I click button delete pulsa product")
+    public void iClickButtonDeletePulsaProduct() { pulsaProductPage.clickButtonDelete();}
+
     @Then("I get the result pulsa product")
     public void iGetTheResultPulsaProduct() {
         pulsaProductPage.verifyAddData();
@@ -63,6 +67,7 @@ public class PulsaProductSteps {
         pulsaProductPage.verifyPulsa10K();
         pulsaProductPage.verifyPulsa10KEquals();
     }
+
 
 
 }

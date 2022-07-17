@@ -34,7 +34,7 @@ public class QuotaProductSteps {
 
     @Then("I get the {string} quota product")
     public void iGetTheQuotaProduct(String result) {
-        if (result.equals("redirectTopupProductPage")){
+        if (result.equals("redirectQuotaProductPage")){
             quotaProductPage.verifyAddData();
             quotaProductPage.verifyAddDataEquals();
         }else {
@@ -47,6 +47,10 @@ public class QuotaProductSteps {
 
 
 //   !TC Delete
+
+    @And("I click button delete quota product")
+    public void iClickButtonDeleteQuotaProduct() { quotaProductPage.clickButtonDelete();}
+
     @Then("I get the result quota product")
     public void iGetTheResultQuotaProduct() {
         quotaProductPage.verifyAddData();
@@ -63,6 +67,7 @@ public class QuotaProductSteps {
         quotaProductPage.verifyQuota4GB();
         quotaProductPage.verifyQuota4GBEquals();
     }
+
 
 
 }

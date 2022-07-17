@@ -16,9 +16,10 @@ public class PulsaProductPage extends PageObject {
     private By fieldProviderId(){ return By.xpath("//input[@placeholder='Provider Id']");}
     private By fieldGrossAmount(){ return By.xpath("//input[@placeholder='Gross Amount']");}
     private By fieldProviderName(){ return By.xpath("//input[@placeholder='Provider Name']");}
-    private By buttonUpdate(){ return By.xpath("button[type='submit']");}
+    private By buttonUpdate(){ return By.xpath("//button[normalize-space()='Update']");}
     private By pulsa10K(){ return By.xpath("(//td[contains(text(),'PULSA 10K')])[1]");}
     private By fieldSearch(){ return By.xpath("//input[@placeholder='Search . . .']");}
+    private By buttonDelete(){ return By.xpath("//tbody/tr[2]/td[8]/button[1]");}
 
 //    *Validation
     private By successAddData(){ return By.xpath("//h2[normalize-space()='Pulsa Product']");}
@@ -42,6 +43,8 @@ public class PulsaProductPage extends PageObject {
     public void clickButtonUpdate(){$(buttonUpdate()).click();}
     @Step
     public void inputFieldSearch(){ $(fieldSearch()).sendKeys("Pulsa 10K");}
+    @Step
+    public void clickButtonDelete(){ $(buttonDelete()).click();}
 
 
 //    *Equals

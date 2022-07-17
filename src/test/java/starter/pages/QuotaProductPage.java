@@ -17,6 +17,7 @@ public class QuotaProductPage extends PageObject {
     private By buttonUpdate(){ return By.xpath("button[type='submit']");}
     private By quota4GB(){ return By.xpath("(//td[contains(text(),'Quota 4GB')])[1]");}
     private By fieldSearch(){ return By.xpath("//input[@placeholder='Search . . .']");}
+    private By buttonDelete(){ return By.xpath("//tbody/tr[3]/td[8]/button[1]");}
 
 //    *Validation
     private By successAddData(){ return By.xpath("//h2[normalize-space()='Quota Product']");}
@@ -41,6 +42,8 @@ public class QuotaProductPage extends PageObject {
     public void clickButtonUpdate(){$(buttonUpdate()).click();}
     @Step
     public void inputFieldSearch(){ $(fieldSearch()).sendKeys("Quota 4GB");}
+    @Step
+    public void clickButtonDelete(){ $(buttonDelete()).click();}
 
 
 //    *Equals
